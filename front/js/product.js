@@ -50,7 +50,7 @@ async function fetchItem() {
 fetchItem()
 
 
-// Store selected data on color and quantity by using LocalStorage
+// Store data of selected items by using LocalStorage
 
 const selectColor = document.getElementById("colors")
 const selectQuantity = document.getElementById("quantity")
@@ -64,12 +64,46 @@ addToCart.addEventListener("click", function() {
   if (selectQuantity.value > 0 && selectQuantity.value < 101) {
 
     if (localStorage.getItem("storeCart") === null) {
-      addItemToCart()
+      
+      let selectedItem = {
+        _id: itemId,
+        quantity: parseInt(selectQuantity.value),
+        color: selectColor.value
+      }
+      itemCart.push(selectedItem)
+      localStorage.setItem("storeCart", JSON.stringify(itemCart))
       console.log(itemCart)
+
     } else {
-    itemCart = JSON.parse(localStorage.getItem("storeCart"))
-    addItemToCart()
-    console.log(itemCart)
+
+      itemCart = JSON.parse(localStorage.getItem("storeCart"))
+      let selectedItem = {
+        _id: itemId,
+        quantity: parseInt(selectQuantity.value),
+        color: selectColor.value
+      }
+
+      for (let i = 0; i < itemCart.length; i++) {
+        if (itemCart[i]._id === selectedItem._id && itemCart[i].color === selectedItem.color) {
+          itemCart[i].quantity += selectedItem.quantity
+        }
+      }
+
+      itemCart.push(selectedItem) // **the item in the same color is pushed even thouth its quantity is increased with looping
+
+
+
+      // itemCart.find(item => {
+      //   if (item._id === selectedItem._id && item.color === selectedItem.color) {
+      //     item.quantity += selectedItem.quantity
+      //   } else {
+      //     itemCart.push(selectedItem)
+      //   }
+      // })　**it returns data of the same items many times as they are looped
+
+      localStorage.setItem("storeCart", JSON.stringify(itemCart))
+      console.log(itemCart)
+
     }
 
   } else {
@@ -78,20 +112,17 @@ addToCart.addEventListener("click", function() {
 
 })
 
-function addItemToCart() {
+// function pushItemToCart() {
 
-  let selectedItem = {
-    _id: itemId,
-    quantity: parseInt(selectQuantity.value),
-    color: selectColor.value
-  }
+//   let selectedItem = {
+//     _id: itemId,
+//     quantity: parseInt(selectQuantity.value),
+//     color: selectColor.value
+//   }
+//   itemCart.push(selectedItem)
+//   localStorage.setItem("storeCart", JSON.stringify(itemCart))
+// }
 
-  itemCart.push(selectedItem)
-  localStorage.setItem("storeCart", JSON.stringify(itemCart))
-}
-
-
-// ** if the same item with the same color selected, its quantity should be added
 
 
 
