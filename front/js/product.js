@@ -50,67 +50,56 @@ async function fetchItem() {
 fetchItem()
 
 
-// Store data of selected items by using LocalStorage
+// Add items to a cart by local storage
 
 const selectColor = document.getElementById("colors")
 const selectQuantity = document.getElementById("quantity")
-const addToCart = document.getElementById("addToCart")
+const addToCartButton = document.getElementById("addToCart")
 
-let itemCart = [] // item id, quantity, color
+let cartItems = [] // item id, quantity, color
 
-
-addToCart.addEventListener("click", function() {
+addToCartButton.addEventListener("click", function() {
 
   if (selectQuantity.value > 0 && selectQuantity.value < 101) {
 
     if (localStorage.getItem("storeCart") === null) {
-      
-      let selectedItem = {
+
+      const selectedItem = {
         _id: itemId,
         quantity: parseInt(selectQuantity.value),
         color: selectColor.value
       }
-      itemCart.push(selectedItem)
-      localStorage.setItem("storeCart", JSON.stringify(itemCart))
-      console.log(itemCart)
+      cartItems.push(selectedItem)
+      localStorage.setItem("storeCart", JSON.stringify(cartItems))
+      console.log(cartItems)
 
     } else {
-
-      itemCart = JSON.parse(localStorage.getItem("storeCart"))
-      let selectedItem = {
+      cartItems = JSON.parse(localStorage.getItem("storeCart"))
+      
+      const selectedItem = {
         _id: itemId,
         quantity: parseInt(selectQuantity.value),
         color: selectColor.value
       }
 
-      for (let i = 0; i < itemCart.length; i++) {
-        if (itemCart[i]._id === selectedItem._id && itemCart[i].color === selectedItem.color) {
-          itemCart[i].quantity += selectedItem.quantity
+      for (let i = 0; i < cartItems.length; i++) {
+        if (cartItems[i]._id === selectedItem._id && cartItems[i].color === selectedItem.color) {
+          cartItems[i].quantity += selectedItem.quantity
+        } else {
+          cartItems.push(selectedItem)
+          localStorage.setItem("storeCart", JSON.stringify(cartItems))
         }
       }
-
-      itemCart.push(selectedItem) // **the item in the same color is pushed even thouth its quantity is increased with looping
-
-
-
-      // itemCart.find(item => {
-      //   if (item._id === selectedItem._id && item.color === selectedItem.color) {
-      //     item.quantity += selectedItem.quantity
-      //   } else {
-      //     itemCart.push(selectedItem)
-      //   }
-      // })　**it returns data of the same items many times as they are looped
-
-      localStorage.setItem("storeCart", JSON.stringify(itemCart))
-      console.log(itemCart)
-
+      console.log(cartItems)
     }
-
   } else {
     alert("Please choose the item count between 1-100")
   }
 
 })
+
+
+
 
 // function pushItemToCart() {
 
@@ -119,10 +108,15 @@ addToCart.addEventListener("click", function() {
 //     quantity: parseInt(selectQuantity.value),
 //     color: selectColor.value
 //   }
-//   itemCart.push(selectedItem)
-//   localStorage.setItem("storeCart", JSON.stringify(itemCart))
+
+//   for (let i = 0; cartItems.length; i++) {
+//     if (cartItems[i]._id === selectedItem._id && cartItems[i].color === selectedItem.color) {
+//       cartItems[i].quantity += selectedItem.quantity
+//     } else {
+//       cartItems.push(selectedItem)
+//     }
+//   }
+//   localStorage.setItem("storeCart", JSON.stringify(cartItems))
 // }
-
-
 
 
