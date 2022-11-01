@@ -28,7 +28,7 @@ async function fetchItems() {
   } catch(error) {
     console.log(error);
   }
-}
+};
 
 fetchItems();
 

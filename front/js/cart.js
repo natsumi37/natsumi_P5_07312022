@@ -1,6 +1,6 @@
 /*
- * DISPLAY ALL THE ITEMS IN THE CART AND CAN BE ADJUSTED
- * IN QUANTITY AND DELETE
+ * DISPLAY ALL THE ITEMS IN THE CART AND ADJUST QUANTITY 
+ * AND DELETE THE ITEMS
  */
 
 // Get data of all the selected items from local storage & sort the items by id
@@ -72,7 +72,7 @@ function displayCartItems(arrayApi, arrayLocalStorage) {
   }
   bindQuantityChange();
   bindDeleteItem();
-}
+};
 
 
 // Caliculate total quantity and total price
@@ -197,7 +197,7 @@ function invalidUserInput() {
   }
   
   return error;
-}
+};
 
 
 // Render order confirmation button
@@ -209,9 +209,7 @@ async function post(item) {
   try {
     const response = await fetch(url + "order", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(item),
     })
     const data = await response.json();
@@ -238,4 +236,4 @@ confirmOrderButton.addEventListener("click", (event) => {
   } else {
     console.log("input error");
   }
-})
+});

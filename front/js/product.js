@@ -102,4 +102,4 @@ addToCartButton.addEventListener("click", (event) => {
     alert("Please choose the item count between 1-100");
   }
 
-})
+});
