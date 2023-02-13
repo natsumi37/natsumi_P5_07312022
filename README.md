@@ -1,15 +1,21 @@
-# Kanap #
+# Develop a website coding dynamic elements using JavaScript
+Student project at OpenClassrooms<br>
+What I did: Code dynamic elements in frontend using JavaScript (not touch HTML nor CSS)
 
-This is the front end and back end server for Project 5 of the Web Developer path.
 
-### Back end Prerequisites ###
+✅Build an e-commerce Website with JavaScript<br>
+Scenario:<br>
+You recently started working at a web development agency. During the first few weeks, you successfully developed a few websites using HTML/CSS and now you have been assigned a new task.
 
-You will need to have Node and `npm` installed locally on your machine.
+Your client is Kanap, a furniture company which sells its products from their physical shop only. The company would now like to add an online store to its physical shop in order to sell its products on the Internet.
 
-### Back end Installation ###
+For this task you will be working with a team made up of:<br>
+・Caroline, the CTO at the agency<br>
+・Frank, the front-end developer who is in charge of coding the static mockup of the site<br> 
+・Bilal, the back-end developer who is in charge of programming the API that the front end will be linked to
 
-Clone this repo. From the "back" folder of the project, run `npm install`. You 
-can then run the server with `node server`. 
-The server should run on `localhost` with default port `3000`. If the
-server runs on another port for any reason, this is printed to the
-console when the server starts, e.g. `Listening on port 3001`.
+💡Skills<br>
+・Create a test plan for an application<br>
+・Ensure data quality using data validation and cleaning<br>
+・Interact with a web service using JavaScript<br>
+・Manage website events with JavaScript<br>
