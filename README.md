@@ -1,9 +1,12 @@
 # Develop a website coding dynamic elements using JavaScript
-Student project at OpenClassrooms<br>
-What I did: Code dynamic elements in frontend using JavaScript (not touch HTML nor CSS)
+Student project at OpenClassrooms
+
+✅What I did<br>
+Code dynamic elements in frontend using JavaScript (not touch HTML nor CSS)
 
 
-✅Build an e-commerce Website with JavaScript<br>
+✅Project Summary
+Project #5: Build an e-commerce Website with JavaScript<br>
 Scenario:<br>
 You recently started working at a web development agency. During the first few weeks, you successfully developed a few websites using HTML/CSS and now you have been assigned a new task.
 
@@ -14,7 +17,7 @@ For this task you will be working with a team made up of:<br>
 ・Frank, the front-end developer who is in charge of coding the static mockup of the site<br> 
 ・Bilal, the back-end developer who is in charge of programming the API that the front end will be linked to
 
-💡Skills<br>
+Skills:<br>
 ・Create a test plan for an application<br>
 ・Ensure data quality using data validation and cleaning<br>
 ・Interact with a web service using JavaScript<br>
