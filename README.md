@@ -1,11 +1,11 @@
-# Develop a website coding dynamic elements using JavaScript
+# Develop an e-commerce website coding dynamic elements with JavaScript
 Student project at OpenClassrooms
 
 ✅What I did<br>
 Code dynamic elements in frontend using JavaScript (not touch HTML nor CSS)
 
 
-✅Project Summary
+✅Project Summary<br>
 Project #5: Build an e-commerce Website with JavaScript<br>
 Scenario:<br>
 You recently started working at a web development agency. During the first few weeks, you successfully developed a few websites using HTML/CSS and now you have been assigned a new task.
