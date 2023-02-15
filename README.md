@@ -2,7 +2,7 @@
 Student project at OpenClassrooms
 
 ✅What I did<br>
-Code dynamic elements in frontend using JavaScript (not touch HTML nor CSS)
+Code dynamic elements in frontend using JavaScript (not touch HTML or CSS)
 
 
 ✅Project Summary<br>
