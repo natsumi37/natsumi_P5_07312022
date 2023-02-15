@@ -1,4 +1,4 @@
-# Develop an e-commerce website coding dynamic elements with JavaScript
+# Project 5: Develop an e-commerce website coding dynamic elements with JavaScript
 Student project at OpenClassrooms
 
 ✅What I did<br>
